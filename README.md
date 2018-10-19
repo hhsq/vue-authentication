@@ -1,6 +1,21 @@
-# vue-frame
-基于vue2.0+element+vue-cli2.X的一套后台框架模板  
-对axios二次封装  
-对路由进行控制，可快速搭建权限菜单（仅需与后台协调返回数据，进行相应修改后即可快速使用）  
-对element的部分方法进行二次封装  
-对element可供修改默认值全局修改  
+# vue-demo
+
+> A Vue.js project
+
+## Build Setup
+
+``` bash
+# install dependencies
+npm install
+
+# serve with hot reload at localhost:8080
+npm run dev
+
+# build for production with minification
+npm run build
+
+# build for production and view the bundle analyzer report
+npm run build --report
+```
+
+For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
