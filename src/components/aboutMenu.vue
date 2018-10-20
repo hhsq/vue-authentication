@@ -25,7 +25,7 @@ export default {
     }
   },
   created () {
-    console.log(this.menus)
+
   },
   methods: {
 

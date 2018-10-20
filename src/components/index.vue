@@ -6,11 +6,11 @@
         <el-menu class="menus" ref="menu"
                  text-color="#999" active-text-color="#40A9FF" router unique-opened
                  :collapse="collapse" default-active="/home">
-          <div class="menu">
+          <div class="menu home-menu">
             <li role="menuitem" tabindex="-1" class="el-menu-item" index="/home" style="color: rgb(64, 169, 255);"
                 :class="{ 'mainColor': $route.path === '/home',
                                 'el-submenu__title': $store.state.aboutMenu.collapse,
-                                'home-menu': $route.path !== '/home'}" @click="toHome()">
+                                'home-menu-item': $route.path !== '/home'}" @click="toHome()">
               <i class="el-icon-setting"></i>
               <span v-show="!$store.state.aboutMenu.collapse">首页</span>
             </li>
@@ -66,7 +66,6 @@
     },
     watch: {
       $route () {
-        console.log(this.$refs.menu)
         if (this.$refs.menu.activeIndex !== '/home') {
 
         }
@@ -98,8 +97,5 @@
   .content {
     flex: 1;
     overflow-x: hidden;
-  }
-  .home-menu{
-    color: rgb(153, 153, 153) !important;
   }
 </style>
