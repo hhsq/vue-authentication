@@ -1,18 +1,18 @@
 import * as API from './axios';
 export default {
-  getApi: params => {
-    return API.GET('/get', params)
+  getApi: (url,params) => {
+    return API.GET(url, params)
   },
-  postApi: params => {
-    return API.POST('/post', params)
+  postApi: (url,params) => {
+    return API.POST(url, params)
   },
-  deleteApi: params => {
-    return API.DELETE('/delete.do', params)
+  deleteApi: (url,params) => {
+    return API.DELETE(url, params)
   },
-  putApi: params => {
-    return API.PUT('/put.do', params)
+  putApi: (url,params) => {
+    return API.PUT(url, params)
   },
-  patchApi: params => {
-    return API.PATCH('/patch.do', params)
+  patchApi: (url,params) => {
+    return API.PATCH(url, params)
   },
 }
