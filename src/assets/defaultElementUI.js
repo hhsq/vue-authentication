@@ -3,7 +3,6 @@
  * ElementUI.XXX.props.XX可以改
  * */
 import ElementUI from 'element-ui';
-console.log(ElementUI);
 // 点击model或esc修改默认值为不能关闭dialog
 ElementUI.Dialog.props.closeOnClickModal.default = false;
 ElementUI.Dialog.props.closeOnPressEscape.default = false;

@@ -1,6 +1,6 @@
 <template>
     <div class="headBar">
-      我是header
+      vue后台管理系统模板
     </div>
 </template>
 

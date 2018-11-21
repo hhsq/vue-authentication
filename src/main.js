@@ -65,7 +65,6 @@ router.beforeEach((to, from, next) => {
   //     url: "",
   //   },
   // ];
-
   if (Store.state.aboutMenu.hasMenuData) {
     next();
     return;
@@ -80,42 +79,41 @@ router.beforeEach((to, from, next) => {
       {
         code: "menu1",
         childs: [
-          {code: "option1", childs: [], level: 1, icon: "", id: "11", parentId: "1", url: "/option1", name: "选项一",},
-          {code: "option2", childs: [], level: 2, icon: "", id: "12", parentId: "1", url: "/option2", name: "选项二",}
+          {code: "menuManage", childs: [], level: 1, icon: "", id: "11", parentId: "1", url: "/menuManage", name: "菜单管理",},
+          {code: "authManage", childs: [], level: 2, icon: "", id: "12", parentId: "1", url: "/authManage", name: "权限管理",}
           ],
         level: 1,
         icon: "el-icon-goods",
         id: "1",
-        name: "菜单1",
+        name: "系统管理",
         parentId: "",
         url: "",
       },
-      {
-        code: "menu1",
-        childs: [
-          {code: "option1", childs: [], level: 1, icon: "", id: "21", parentId: "2", url: "/option1", name: "选项一",},
-          {code: "option2", childs: [], level: 2, icon: "", id: "22", parentId: "2", url: "/option2", name: "选项二",}
-        ],
-        level: 2,
-        icon: "el-icon-message",
-        id: "2",
-        name: "菜单2",
-        parentId: "",
-        url: "",
-      },
+      // {
+      //   code: "menu1",
+      //   childs: [
+      //     {code: "option1", childs: [], level: 1, icon: "", id: "21", parentId: "2", url: "/option1", name: "选项一",},
+      //     {code: "option2", childs: [], level: 2, icon: "", id: "22", parentId: "2", url: "/option2", name: "选项二",}
+      //   ],
+      //   level: 2,
+      //   icon: "el-icon-message",
+      //   id: "2",
+      //   name: "菜单2",
+      //   parentId: "",
+      //   url: "",
+      // },
     ];
-    router.addRoutes(powerRouter);
+
     Store.commit('SET_MENU_DATA', d);
+    // next({ ...to, replace: true })
     Store.commit("SET_MENU_STATUS");
-    next()
-
-
+    resolve(next);
     // API.postApi(params).then( res=>{
     //   Store.commit('clearMenuData');
     //   Store.commit('SET_MENU_DATA', res.data);
     // })
   }).then(e => {
-    next();
+    next({ ...to });
   });
 });
 

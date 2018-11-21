@@ -28,30 +28,36 @@ export const powerRouter = [
     path: '/menu1',
     name: 'menu1',
     component: Index,
-    meta: {title: 'option1'},
+    meta: {title: '系统管理'},
     children: [
       {
-        path: '/option1',
-        name: 'Option1',
-        meta: {title: 'Option1'},
+        path: '/menuManage',
+        name: 'menuManage',
+        meta: {title: '菜单管理'},
         component: Option1,
       },
-    ]
-  },
-  {
-    path: '/menu2',
-    name: 'menu2',
-    component: Index,
-    meta: {title: 'option2'},
-    children: [
       {
-        path: '/option2',
-        name: 'Option2',
-        meta: {title: 'Option2'},
+        path: '/authManage',
+        name: 'authManage',
+        meta: {title: '权限管理'},
         component: Option2,
       },
     ]
   },
+  // {
+  //   path: '/menu2',
+  //   name: 'menu2',
+  //   component: Index,
+  //   meta: {title: 'option2'},
+  //   children: [
+  //     {
+  //       path: '/option2',
+  //       name: 'Option2',
+  //       meta: {title: 'Option2'},
+  //       component: Option2,
+  //     },
+  //   ]
+  // },
 ];
 export default new Router({
   mode: 'history',

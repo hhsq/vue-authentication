@@ -3,20 +3,22 @@
     <Header class="headBar"></Header>
     <div class="container">
       <div class="menuBox">
-        <el-menu class="menus" ref="menu"
-                 text-color="#999" active-text-color="#40A9FF" router unique-opened
-                 :collapse="collapse" default-active="/home">
-          <div class="menu home-menu">
-            <li role="menuitem" tabindex="-1" class="el-menu-item" index="/home" style="color: rgb(64, 169, 255);"
-                :class="{ 'mainColor': $route.path === '/home',
+        <el-scrollbar style="height: 100%;border-right: 1px solid #f0f0f0;">
+          <el-menu class="menus" ref="menu" @select="selectMenu"
+                   text-color="#999" active-text-color="#40A9FF" router unique-opened
+                   :collapse="collapse" default-active="/home">
+            <div class="menu home-menu">
+              <li role="menuitem" tabindex="-1" class="el-menu-item" index="/home" style="color: rgb(64, 169, 255);"
+                  :class="{ 'mainColor': $route.path === '/home',
                                 'el-submenu__title': $store.state.aboutMenu.collapse,
                                 'home-menu-item': $route.path !== '/home'}" @click="toHome()">
-              <i class="el-icon-setting"></i>
-              <span v-show="!$store.state.aboutMenu.collapse">首页</span>
-            </li>
-          </div>
-          <Menu :menus="menuData"></Menu>
-        </el-menu>
+                <i class="el-icon-setting"></i>
+                <span v-show="!$store.state.aboutMenu.collapse">首页</span>
+              </li>
+            </div>
+            <Menu :menus="menuData"></Menu>
+          </el-menu>
+        </el-scrollbar>
       </div>
       <Content class="content"></Content>
     </div>
@@ -56,8 +58,12 @@
 
     },
     updated () {
+      this.$refs.menu.activeIndex = this.$route.path
     },
     methods: {
+      selectMenu () {
+
+      },
       toHome () {
         this.$router.push('/home');
         this.$refs.menu.activeIndex = '/home'

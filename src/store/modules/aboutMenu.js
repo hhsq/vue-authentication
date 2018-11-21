@@ -1,3 +1,7 @@
+import {defaultRouter, powerRouter} from "@/router";
+import router from './../../router'
+
+
 const aboutMenu = {
   state: {
     menuData: [],
@@ -9,13 +13,17 @@ const aboutMenu = {
       state.menuData.splice(0,state.menuData.length)
     },
     SET_MENU_DATA: (state, arr) => {
-      // let indexPage= {
-      //   name: '首页',
-      //   url: '/home',
-      //   icon: 'el-icon-menu'
-      // };
-      // state.menuData.push(indexPage, ...arr)
-      state.menuData = arr
+      let power = [];
+      arr.forEach( e=> {
+        e.childs.forEach( c=>{
+          power.push(c.url)
+        });
+      });
+      powerRouter.forEach( e=> {
+        e.children = e.children.filter( f => power.some( s=> s === f.path))
+      });
+      router.addRoutes(powerRouter);
+      state.menuData = arr;
     },
     TOGGLE_MENU (state) {
       state.collapse = !state.collapse
