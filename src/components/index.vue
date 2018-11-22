@@ -3,7 +3,7 @@
     <Header class="headBar"></Header>
     <div class="container">
       <div class="menuBox">
-        <el-scrollbar style="height: 100%;border-right: 1px solid #f0f0f0;">
+        <!--<el-scrollbar style="height: 100%;">-->
           <el-menu class="menus" ref="menu" @select="selectMenu"
                    text-color="#999" active-text-color="#40A9FF" router unique-opened
                    :collapse="collapse" default-active="/home">
@@ -18,7 +18,7 @@
             </div>
             <Menu :menus="menuData"></Menu>
           </el-menu>
-        </el-scrollbar>
+        <!--</el-scrollbar>-->
       </div>
       <Content class="content"></Content>
     </div>

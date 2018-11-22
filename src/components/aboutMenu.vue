@@ -1,7 +1,7 @@
 <template>
   <div class="menu">
     <template v-for="(menu, idx) in menus">
-      <el-menu-item v-if="!menu.childs || (!menu.childs.length&&menu.parentId)" :index="menu.url">
+      <el-menu-item v-if="!menu.children || (!menu.children.length&&menu.parentId)" :index="menu.url">
         <i :class="menu.icon"></i>
         <span slot="title">{{menu.name}}</span>
       </el-menu-item>
@@ -10,7 +10,7 @@
           <i :class="menu.icon"></i>
           <span v-show="!$store.state.aboutMenu.collapse" slot="title"> {{menu.name}}</span>
         </template>
-        <Menu :menus="menu.childs"></Menu>
+        <Menu :menus="menu.children"></Menu>
       </el-submenu>
     </template>
   </div>

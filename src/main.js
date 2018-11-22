@@ -40,9 +40,9 @@ router.beforeEach((to, from, next) => {
   // let d = [
   //   {
   //     code: "menu1",
-  //     childs: [
-  //       {code: "option1", childs: [], level: 1, icon: "", id: "11", parentId: "1", url: "", name: "选项一",},
-  //       {code: "option2", childs: [], level: 2, icon: "", id: "12", parentId: "1", url: "", name: "选项二",}
+  //     children: [
+  //       {code: "option1", children: [], level: 1, icon: "", id: "11", parentId: "1", url: "", name: "选项一",},
+  //       {code: "option2", children: [], level: 2, icon: "", id: "12", parentId: "1", url: "", name: "选项二",}
   //     ],
   //     level: 1,
   //     icon: "el-icon-goods",
@@ -53,9 +53,9 @@ router.beforeEach((to, from, next) => {
   //   },
   //   {
   //     code: "menu1",
-  //     childs: [
-  //       {code: "option1", childs: [], level: 1, icon: "", id: "21", parentId: "2", url: "", name: "选项一",},
-  //       {code: "option2", childs: [], level: 2, icon: "", id: "22", parentId: "2", url: "", name: "选项二",}
+  //     children: [
+  //       {code: "option1", children: [], level: 1, icon: "", id: "21", parentId: "2", url: "", name: "选项一",},
+  //       {code: "option2", children: [], level: 2, icon: "", id: "22", parentId: "2", url: "", name: "选项二",}
   //     ],
   //     level: 2,
   //     icon: "el-icon-message",
@@ -77,10 +77,10 @@ router.beforeEach((to, from, next) => {
     };
     let d = [
       {
-        code: "menu1",
-        childs: [
-          {code: "menuManage", childs: [], level: 1, icon: "", id: "11", parentId: "1", url: "/menuManage", name: "菜单管理",},
-          {code: "authManage", childs: [], level: 2, icon: "", id: "12", parentId: "1", url: "/authManage", name: "权限管理",}
+        code: "sysManage",
+        children: [
+          {code: "menuManage", children: [], level: 1, icon: "", id: "11", parentId: "1", url: "/menuManage", name: "菜单管理",},
+          {code: "authManage", children: [], level: 2, icon: "", id: "12", parentId: "1", url: "/authManage", name: "权限管理",}
           ],
         level: 1,
         icon: "el-icon-goods",
@@ -91,9 +91,9 @@ router.beforeEach((to, from, next) => {
       },
       // {
       //   code: "menu1",
-      //   childs: [
-      //     {code: "option1", childs: [], level: 1, icon: "", id: "21", parentId: "2", url: "/option1", name: "选项一",},
-      //     {code: "option2", childs: [], level: 2, icon: "", id: "22", parentId: "2", url: "/option2", name: "选项二",}
+      //   children: [
+      //     {code: "option1", children: [], level: 1, icon: "", id: "21", parentId: "2", url: "/option1", name: "选项一",},
+      //     {code: "option2", children: [], level: 2, icon: "", id: "22", parentId: "2", url: "/option2", name: "选项二",}
       //   ],
       //   level: 2,
       //   icon: "el-icon-message",

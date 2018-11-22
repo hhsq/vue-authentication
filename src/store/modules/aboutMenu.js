@@ -15,7 +15,7 @@ const aboutMenu = {
     SET_MENU_DATA: (state, arr) => {
       let power = [];
       arr.forEach( e=> {
-        e.childs.forEach( c=>{
+        e.children.forEach( c=>{
           power.push(c.url)
         });
       });
