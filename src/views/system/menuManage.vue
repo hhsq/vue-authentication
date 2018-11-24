@@ -115,7 +115,7 @@
 </script>
 
 <style lang="less" scoped>
-  @import (reference) '../assets/common.less';
+  @import (reference) '~@/assets/common.less';
   .common-style{
     border: 1px solid #e6e6e6;
     padding: 10px;

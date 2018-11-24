@@ -13,7 +13,7 @@
       <span @click.prevent.stop="closeMenu"></span>
       <ul class='contextmenu' v-show="visible" :style="{left:left+'px',top:top+'px'}">
         <li @click="closeSelectedTab">关闭当前</li>
-        <li @click="closeOthersTabs">关闭其他</li>
+        <!--<li @click="closeOthersTabs">关闭其他</li>-->
         <li @click="closeAllTabs">关闭所有</li>
       </ul>
     </div>
@@ -69,7 +69,8 @@
         closeSelectedTab () {
           this.removeTab(this.$route.path);
         },
-        closeOthersTabs () {
+        closeOthersTabs (e) {
+          console.log(e);
           this.$store.commit('DEL_OTHER_VIEWS',this.$route.path)
         },
         closeAllTabs () {

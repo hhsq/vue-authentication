@@ -80,7 +80,8 @@ router.beforeEach((to, from, next) => {
         code: "sysManage",
         children: [
           {code: "menuManage", children: [], level: 1, icon: "", id: "11", parentId: "1", url: "/menuManage", name: "菜单管理",},
-          {code: "authManage", children: [], level: 2, icon: "", id: "12", parentId: "1", url: "/authManage", name: "权限管理",}
+          {code: "authManage", children: [], level: 2, icon: "", id: "12", parentId: "1", url: "/authManage", name: "权限管理",},
+          {code: "authListManage", children: [], level: 3, icon: "", id: "13", parentId: "1", url: "/authListManage", name: "权限列表管理",}
           ],
         level: 1,
         icon: "el-icon-goods",
