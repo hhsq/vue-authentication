@@ -1,9 +1,13 @@
 <template>
   <div id="contentBox">
     <ConHead class="conHead"></ConHead>
-    <div style="height: 40px"></div>
+    <div style="height: 75px"></div>
     <div class="contentDetail" ref="contentDetail" element-loading-text="正在加载数据...">
-      <router-view></router-view>
+      <transition name="fade" mode="out-in">
+        <keep-alive :include="aliveViews">
+          <router-view/>
+        </keep-alive>
+      </transition>
     </div>
   </div>
 </template>
@@ -13,8 +17,13 @@
   export default {
     name: "contentBar",
     components:{
-      ConHead
-    }
+      ConHead,
+    },
+    computed: {
+      aliveViews () {
+        return this.$store.state.tabsView.aliveView
+      }
+    },
   }
 </script>
 
@@ -31,7 +40,7 @@
   }
   .contentDetail {
      padding: 20px;
-     height: calc(~'100% - 40px');
+     height: calc(100% - 75px);
      flex: 1;
      overflow-y: auto;
    }

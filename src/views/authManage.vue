@@ -6,14 +6,14 @@
 
 <script>
     export default {
-      name: "option2",
+      name: "authManage",
       methods: {
         open() {
           this.$c.alertConfirm("二次包裹message").then(e=>{
             this.$c.alertMsg("二次包裹message");
           }).catch(e=>{});
         },
-      }
+      },
     }
 </script>
 

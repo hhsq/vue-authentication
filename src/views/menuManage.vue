@@ -130,6 +130,7 @@
     >div:last-child{
       width: calc(100% - 380px);
       margin-left: 30px;
+      overflow-y: auto;
       .common-style;
     }
     .treeHead{

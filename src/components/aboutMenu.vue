@@ -34,5 +34,4 @@ export default {
 </script>
 <style scoped lang="less">
 
-  /*.el-menu--collapse .el-submenu .el-submenu__title .el-submenu__icon-arrow, .el-menu--collapse .el-submenu .el-submenu__title span*/
 </style>

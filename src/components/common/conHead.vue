@@ -21,19 +21,24 @@
         </el-dropdown>
       </div>
     </div>
+    <div class="tabsView">
+      <TabsView></TabsView>
+    </div>
   </div>
 </template>
 <script>
   const Bread = r => require.ensure([], () => r(require('@/components/common/breadcrumb.vue')), 'Bread');
+  const TabsView = r => require.ensure([], () => r(require('@/components/common/tabsView.vue')), 'tabsView');
   export default {
     name: 'conHead',
+    components: {
+      Bread,
+      TabsView,
+    },
     data () {
       return {
         userName: '黄某人'
       }
-    },
-    components: {
-      Bread,
     },
     methods: {
       collapse() {
@@ -58,9 +63,9 @@
   .conHeadTitle {
     .flsb;
     height: 40px;
-    border-bottom-color: #f0f0f0;
+    border-bottom: 1px solid #f0f0f0;
     .flaic;
-    box-shadow: 0 1px 3px 0 rgba(0,0,0,.12), 0 0 3px 0 rgba(0,0,0,.04);
+    /*box-shadow: 0 1px 3px 0 rgba(0,0,0,.12), 0 0 3px 0 rgba(0,0,0,.04);*/
   }
 
   .conHeadTab {
@@ -86,7 +91,11 @@
     cursor: pointer;
     .cc
   }
+
   .userInfo{
     margin-right: 15px;
+  }
+  .el-dropdown-link{
+    cursor: pointer;
   }
 </style>

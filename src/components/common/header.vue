@@ -20,8 +20,8 @@
 
   .headBar {
     width: 100vw;
-    height: 60px;
-    line-height: 60px;
+    height: 50px;
+    line-height: 50px;
     text-align: center;
     background-color: #eeeeee;
   }
