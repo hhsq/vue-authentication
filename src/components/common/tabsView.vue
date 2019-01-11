@@ -4,7 +4,7 @@
         <el-tab-pane label="首页" name="/home"></el-tab-pane>
         <el-tab-pane
           v-for="(item, idx) in visitedViews"
-          :key="item.meta.title"
+          :key="idx"
           :label="item.meta.title"
           :name="item.path"
         >
@@ -70,7 +70,6 @@
           this.removeTab(this.$route.path);
         },
         closeOthersTabs (e) {
-          console.log(e);
           this.$store.commit('DEL_OTHER_VIEWS',this.$route.path)
         },
         closeAllTabs () {

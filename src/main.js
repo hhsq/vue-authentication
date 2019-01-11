@@ -6,7 +6,7 @@ import {defaultRouter, powerRouter} from "@/router";
 import Axios from "axios";
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
-import DefaultElementUI from './assets/defaultElementUI';
+import './assets/defaultElementUI';
 import API from './api/commonApi';
 import Common from './assets/common';
 import 'babel-polyfill';

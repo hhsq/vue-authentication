@@ -13,10 +13,11 @@ export const defaultRouter = [
     setRoute('/home', 'index', Index, {title: ''}, [
         setRoute('/home', 'home', ()=>import('@/views/home.vue'), {title: '首页'}, []),
     ]),
+    setRoute('/', '', ()=>import('@/views/log.vue'), {title: '登录'}, []),
 ];
 export const powerRouter = [
-    setRoute('', 'sysManage', Index, {title: '系统管理'}, [
-        setRoute('/menuManage', 'menuManage', ()=>import('@/views/system/menuManage.vue'), {title: '系统管理'}, []),
+    setRoute('sysManage', 'sysManage', Index, {title: '系统管理'}, [
+        setRoute('/menuManage', 'menuManage', ()=>import('@/views/system/menuManage.vue'), {title: '菜单管理'}, []),
         setRoute('/authManage', 'authManage', ()=>import('@/views/system/authManage.vue'), {title: '权限管理'}, []),
         setRoute('/authListManage', 'authListManage', ()=>import('@/views/system/authListManage.vue'), {title: '权限列表管理'}, []),
     ]),

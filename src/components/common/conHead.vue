@@ -14,9 +14,7 @@
             {{userName}}<i class="el-icon-arrow-down el-icon--right"></i>
           </span>
           <el-dropdown-menu slot="dropdown">
-            <el-dropdown-item command="one">第一</el-dropdown-item>
-            <el-dropdown-item command="tow">第二</el-dropdown-item>
-            <el-dropdown-item command="three">第三</el-dropdown-item>
+            <el-dropdown-item command="getOut">退出</el-dropdown-item>
           </el-dropdown-menu>
         </el-dropdown>
       </div>
@@ -46,13 +44,13 @@
       },
       handleCommand (command) {
         switch (command) {
-          case 'one':
-            break;
-          case 'two':
-            break;
-          case 'three':
+          case 'getOut':
+            this.getOut();
             break;
         }
+      },
+      getOut() {
+          this.$router.push('/');
       }
     }
   }
