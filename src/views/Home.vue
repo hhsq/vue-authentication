@@ -1,18 +1,22 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+    <div>
+      <el-button @click="open">一个简单的按钮</el-button>
+    </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
-export default {
-  name: 'home',
-  components: {
-    HelloWorld
-  }
-}
+    export default {
+      name: "home",
+      methods: {
+        open() {
+          this.$c.alertConfirm("二次包裹message").then(e=>{
+            this.$c.alertMsg("二次包裹message");
+          }).catch(e=>{});
+        },
+      }
+    }
 </script>
+
+<style scoped>
+
+</style>

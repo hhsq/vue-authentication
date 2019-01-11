@@ -1,25 +1,27 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from './views/Home.vue'
+import Index from '@/components/index'
+Vue.use(Router);
 
-Vue.use(Router)
-
-export default new Router({
-  mode: 'history',
-  base: process.env.BASE_URL,
-  routes: [
-    {
-      path: '/',
-      name: 'home',
-      component: Home
-    },
-    {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
+const setRoute = (path,name,component,meta,children) => {
+    return {
+        path,name,component,meta,children
     }
-  ]
+};
+
+export const defaultRouter = [
+    setRoute('/home', 'index', Index, {title: ''}, [
+        setRoute('/home', 'home', ()=>import('@/views/home.vue'), {title: '首页'}, []),
+    ]),
+];
+export const powerRouter = [
+    setRoute('', 'sysManage', Index, {title: '系统管理'}, [
+        setRoute('/menuManage', 'menuManage', ()=>import('@/views/system/menuManage.vue'), {title: '系统管理'}, []),
+        setRoute('/authManage', 'authManage', ()=>import('@/views/system/authManage.vue'), {title: '权限管理'}, []),
+        setRoute('/authListManage', 'authListManage', ()=>import('@/views/system/authListManage.vue'), {title: '权限列表管理'}, []),
+    ]),
+];
+export default new Router({
+    mode: 'history',
+    routes: defaultRouter
 })

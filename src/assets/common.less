@@ -1,0 +1,86 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.flex () { // 设置弹性盒
+  display: flex;
+}
+
+.cc { // 居中
+  .flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fdc { // 切换主轴
+  .flex;
+  flex-direction: column;
+}
+
+/**
+主轴控制
+*/
+.flsb {
+  .flex;
+  justify-content: space-between;
+}
+.flsa {
+  .flex;
+  justify-content: space-around;
+}
+.flc {
+  .flex;
+  justify-content: center;
+}
+.flfs {
+  justify-content: flex-start;
+}
+.flfe {
+  justify-content: flex-end;
+}
+
+/**
+副轴控制
+*/
+.flaic {
+  .flex;
+  align-items: center;
+}
+.flaifs {
+  .flex;
+  align-items: flex-start;
+}
+.flaife {
+  .flex;
+  align-items: flex-end;
+}
+
+.el-menu--collapse .el-submenu .el-submenu__title .el-submenu__icon-arrow{
+  display: none;
+}
+.el-menu-item:hover,.el-submenu__title:hover,.el-menu-item.is-active{
+  background-color: #f0f0f0;
+}
+.home-menu .el-menu-item:focus{
+  background-color: #fff;
+}
+.home-menu-item{
+  color: rgb(153, 153, 153) !important;
+}
+/**滚动条控制*/
+
+::-webkit-scrollbar-track-piece { //滚动条未占区域
+  background-color:#f8f8f8;
+}
+::-webkit-scrollbar {//滚动条的宽度
+  width:9px;
+  height:9px;
+}
+::-webkit-scrollbar-thumb {//滚动条的设置
+  background-color:#dddddd;
+  border-radius: 15px;
+  min-height:28px;
+}
