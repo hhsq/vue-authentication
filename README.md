@@ -37,5 +37,6 @@
 * 拆分路由
 * element的部分方法进行二次处理
 * element可供修改默认值全局修改
+* 动态tags(与路由绑定),暂时采用element-tabs,准备重写中
 
 
