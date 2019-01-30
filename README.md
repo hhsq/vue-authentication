@@ -1,7 +1,7 @@
 # Vue后台管理系统架子
 
 ## <a name="features">技术栈</a>
-> 详情可参阅 `package.json`
+> 详情可参见 `package.json`
 * 基于VueCli3.v
 * Vue
 * Vuex
@@ -15,9 +15,9 @@
 ## <a name="begin">开始</a>
 在开始前，希望您了解MVVM,了解Vue,熟悉 ES6
 
-* [Vue 文档][https://cn.vuejs.org/v2/guide/]
-* [Vuex 文档][https://vuex.vuejs.org/]
-* [VueRouter 文档][https://router.vuejs.org/]
+* [Vue 文档] [https://cn.vuejs.org/v2/guide/]
+* [Vuex 文档] [https://vuex.vuejs.org/]
+* [VueRouter 文档] [https://router.vuejs.org/]
 
 
 ### <a name="install">安装</a>
@@ -28,8 +28,8 @@
 在`react-blog` 的命令窗口下，运行 `npm run serve`
 
 ### <a name="notice">注:</a>
-如需配置webpack,可在vue.config.js中进行相应处理
-可参照[https://cli.vuejs.org/zh/config/]
+如需配置webpack,可在vue.config.js中进行相应处理  
+可参见 [https://cli.vuejs.org/zh/config/]
 
 ## <a name="features">功能</a>
 * axios封装
