@@ -25,7 +25,7 @@
 直到依赖安装完成
 
 ### <a name="start">启动</a>
-在`react-blog` 的命令窗口下，运行 `npm run serve`
+在`vue-framework` 的命令窗口下，运行 `npm run serve`
 
 ### <a name="notice">注:</a>
 如需配置webpack,可在vue.config.js中进行相应处理  
