@@ -6,7 +6,7 @@
       <el-table-column prop="status" label="状态"></el-table-column>
       <el-table-column prop="createdTime" label="创建时间"></el-table-column>
       <el-table-column label="操作">
-        <template slot-scope="scope">
+        <template v-slot="scope">
           <el-button>权限授予</el-button>
         </template>
       </el-table-column>
