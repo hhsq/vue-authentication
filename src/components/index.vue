@@ -20,7 +20,7 @@
           </el-menu>
         </el-scrollbar>
       </div>
-      <Content class="content"></Content>
+      <ContentA class="content"></ContentA>
     </div>
   </div>
 </template>
@@ -30,14 +30,14 @@
   import {defaultRouter, powerRouter} from "@/router";
   const Menu = r => require.ensure([], () => r(require('@/components/aboutMenu.vue')), 'Menu');
   const Header = r => require.ensure([], () => r(require('@/components/common/header.vue')), 'Header');
-  const Content = r => require.ensure([], () => r(require('@/components/common/content.vue')), 'Content');
+  const ContentA = r => require.ensure([], () => r(require('@/components/common/content.vue')), 'Content');
 
   export default {
     name: 'Index',
     components: {
       Menu,
       Header,
-      Content
+      ContentA
     },
     data() {
       return {

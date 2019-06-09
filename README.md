@@ -1,4 +1,4 @@
-# Vue后台管理系统架子
+# Vue后台管理鉴权模板
 
 ## <a name="features">技术栈</a>
 > 详情可参见 `package.json`
@@ -25,7 +25,7 @@
 直到依赖安装完成
 
 ### <a name="start">启动</a>
-在`vue-framework` 的命令窗口下，运行 `npm run serve`
+在`vue-authority` 的命令窗口下，运行 `npm run serve`
 
 ### <a name="notice">注:</a>
 如需配置webpack,可在vue.config.js中进行相应处理  
@@ -37,6 +37,5 @@
 * 拆分路由
 * element的部分方法进行二次处理
 * element可供修改默认值全局修改
-* 动态tags(与路由绑定),暂时采用element-tabs,准备重写中
 
 
